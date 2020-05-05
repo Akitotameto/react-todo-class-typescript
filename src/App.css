@@ -1,0 +1,16 @@
+body {
+  padding: 10px;
+  background-color: gainsboro;
+}
+
+.contents-1 {
+  padding: 10px;
+}
+
+.table-1 {
+  margin-top: 20px;
+}
+
+td {
+  text-align: center;
+}

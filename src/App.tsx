@@ -1,13 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div>
-      <p>Hello world</p>
-    </div>
-  );
+import './App.css';
+import List from './pages/list';
+import Set from './pages/set';
+
+class App extends Component {
+  render() {
+    return(
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={List} />
+          <Route path='/set' component={Set} />
+        </Switch>
+      </BrowserRouter>
+    )
+  }
 }
 
 export default App;
