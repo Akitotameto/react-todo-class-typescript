@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import Header from  '../components/header'
 import Form from  '../components/form'
 
-class Set extends Component {
+type Props = {
+    history: any
+}
+
+type State = {}
+
+class Set extends Component<Props, State> {
     render() {
         return(
             <div>

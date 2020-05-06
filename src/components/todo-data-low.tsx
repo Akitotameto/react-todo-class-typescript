@@ -1,7 +1,24 @@
 import React, {Component} from 'react'
 
-class TodoDateLow extends Component {
-    constructor(props) {
+type TodoDataType = {
+    id: number,
+    title: string,
+    content: string,
+    createdAt: string,
+    category: number,
+    isFavorite: boolean
+}
+
+type Props = {
+    todoData: TodoDataType[]
+}
+
+type State = {
+    todoData: TodoDataType[]
+}
+
+class TodoDateLow extends Component<Props, State> {
+    constructor(props: Props) {
         super(props)
 
         this.state = {
@@ -17,7 +34,7 @@ class TodoDateLow extends Component {
         console.log('componentDidUpdate!!!')
     }
 
-    onFavorite = id => {
+    onFavorite = (id: number) => {
         const { todoData } = this.state;
         console.log("test", id)
         todoData.map((v, index) => {
@@ -40,7 +57,7 @@ class TodoDateLow extends Component {
         })
     };
 
-    onUnFavorite = id => {
+    onUnFavorite = (id: number) => {
         const { todoData } = this.state;
         console.log("test", id)
         todoData.map((v, index) => {
@@ -63,7 +80,7 @@ class TodoDateLow extends Component {
         })
     };
 
-    onDeleteLow = id => {
+    onDeleteLow = (id: number) => {
         const { todoData } = this.state;
         console.log("test", id)
         todoData.map((v, index) => {
